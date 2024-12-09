@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Triage System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hospital Triage System</h1>
+        </header>
+
+        <!-- Login Section -->
+        <section id="login-section" class="section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <label for="code">Code</label>
+                <input type="password" id="code" placeholder="Enter your code" required>
+                <button type="submit" id="login-btn">Login</button>
+            </form>
+            <p id="login-message"></p>
+        </section>
+
+        <!-- Admin Dashboard -->
+        <section id="admin-dashboard" class="section hidden">
+            <h2>Admin Dashboard</h2>
+            <div class="actions">
+                <button id="view-patients-btn">View All Patients</button>
+                <button id="add-patient-btn">Add New Patient</button>
+                <button id="assign-btn">Assign Room & Doctor</button>
+            </div>
+            <div id="patients-list" class="hidden"></div>
+
+           
+            <div id="add-patient-form" class="hidden">
+                <h3>Add New Patient</h3>
+                <form>
+                    <label for="patient-name">Name</label>
+                    <input type="text" id="patient-name" placeholder="Patient Name" required>
+                    <label for="patient-gender">Gender</label>
+                    <input type="text" id="patient-gender" placeholder="Gender" required>
+                    <label for="patient-dob">Date of Birth</label>
+                    <input type="date" id="patient-dob" required>
+                    <label for="patient-contact">Contact</label>
+                    <input type="text" id="patient-contact" placeholder="Contact" required>
+                    <label for="patient-priority">Priority ID</label>
+                    <input type="number" id="patient-priority" placeholder="Priority ID" required>
+                    <button type="button" id="submit-patient-btn">Submit</button>
+                </form>
+            </div>
+
+            <!-- Assign Room & Doctor Form -->
+            <div id="assign-form" class="hidden">
+                <h3>Assign Room and Doctor</h3>
+                <form>
+                    <label for="assign-patient-id">Patient ID</label>
+                    <input type="number" id="assign-patient-id" placeholder="Patient ID" required>
+                    <label for="assign-doctor-id">Doctor ID</label>
+                    <input type="number" id="assign-doctor-id" placeholder="Doctor ID" required>
+                    <label for="assign-room-id">Room ID</label>
+                    <input type="number" id="assign-room-id" placeholder="Room ID" required>
+                    <button type="button" id="assign-submit-btn">Assign</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- User Dashboard -->
+        <section id="user-dashboard" class="section hidden">
+            <h2>User Dashboard</h2>
+            <button id="view-wait-time-btn">View Wait Time</button>
+            <div id="wait-time"></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
